@@ -1,0 +1,16 @@
+Author: Diane Trout <diane@ghic.org>
+Description: Pytest >= 4.0 deprecated using [pytest] in setup.cfg
+ in favor of [tool:pytest]
+Forwarded: https://gitlab.com/pycqa/flake8-polyfill/issues/3
+
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -1,7 +1,7 @@
+ [bdist_wheel]
+ universal = 1
+ 
+-[pytest]
++[tool:pytest]
+ norecursedirs = .git .* *.egg* old docs dist build
+ addopts = -rw
+ 
